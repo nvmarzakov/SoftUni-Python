@@ -8,6 +8,7 @@ def create_matrix(size):
 
         if 's' in row:
             squirrel_pos = [i, row.index('s')]
+            
     matrix[squirrel_pos[0]][squirrel_pos[1]] = '*'
 
     return matrix, squirrel_pos
