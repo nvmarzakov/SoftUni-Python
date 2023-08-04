@@ -2,7 +2,7 @@
 {% block content %}
 
     <!-- Display paragraph: If there are no cars yet-->
-    {% if not cars %}
+    {% if not cars or not profile %}
         <p class="no-articles">No cars yet</p>
     {% else %}
         <!-- Display div "car" with information about every car (if any)-->

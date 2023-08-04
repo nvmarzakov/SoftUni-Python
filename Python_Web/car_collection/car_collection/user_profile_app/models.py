@@ -51,11 +51,12 @@ class Profile(models.Model):
         null=True,
     )
 
-
-def get_profile_context():
-    profile = Profile.objects.first()
-    context = {
-        'profile': profile,
-    }
-
-    return context
+    def get_name(self):
+        if self.first_name and self.last_name:
+            return f'{self.first_name} {self.last_name}'
+        elif self.first_name:
+            return self.first_name
+        elif self.last_name:
+            return self.last_name
+        else:
+            return ''
