@@ -14,9 +14,9 @@ class Employee:
         return total_salary
 
     def raise_salary(self, amount):
-        new_salary = self.salary + amount
+        self.salary += amount
 
-        return new_salary
+        return self.salary
 
 
 employee = Employee(744423129, "John", "Smith", 1000)
